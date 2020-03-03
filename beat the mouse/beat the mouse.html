@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>beat the mouse</title>
+    <style>
+        .container {
+            position: absolute;
+            margin: auto;
+            width: 100%;
+            height: 70%;
+            border-top-style: solid;
+            border-color: #f9fff9;
+        }
+
+        #img {
+            width: 50px;
+        }
+
+        .message {
+            font-size: 20px;
+            color: rgb(249, 255, 253);
+        }
+
+        .title {
+            margin-left: 50%;
+        }
+
+    </style>
+    <script src="js/jquery-3.4.1.min.js"></script>
+</head>
+<body background="img/bg.png">
+<div class="bg" id="bg">
+
+    <span class="title"><img id="img" src="img/game.png"></span>
+    <!-- start,fresh,scores-->
+    <div class="title">
+        <div class="message">score:<span id="score">0</span></div>
+        <!--timecounter-->
+        <div class="message"><span id="timer">timer:1:00</span></div>
+        <input type="button" id="startId" value="start" onclick="start()">
+        <input type="button" id="stopId" value="fresh" onclick="location.reload()">
+    </div>
+    <br/>
+</div>
+
+<!-- WHERE MOUSE OUT---->
+<div class="container" id="container" onmouseup="add()" onmouseover="this.style.cursor='hand'"></div>
+<!--js FILE LINK-->
+<script src="js/mouse.js"></script>
+</body>
+</html>
